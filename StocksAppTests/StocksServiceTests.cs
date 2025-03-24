@@ -1,6 +1,7 @@
 using AutoFixture;
 using Entities;
 using FluentAssertions;
+using Microsoft.Extensions.Logging;
 using Moq;
 using RepositoryContracts;
 using ServiceContracts;
@@ -18,6 +19,8 @@ namespace StocksAppTests
         private readonly Mock<IStockRepository> _stockRepositoryMock;
         private readonly IStockRepository _stockRepository;
         private readonly IFixture _fixture;
+        private readonly ILogger<StocksService> _logger;
+        private readonly Mock<ILogger<StocksService>> _loggerMock;
 
 
         public StocksServiceTests(ITestOutputHelper testOutputHelper)
@@ -26,8 +29,10 @@ namespace StocksAppTests
             _testOutputHelper = testOutputHelper;
             _fixture = new Fixture();
             _stockRepositoryMock = new Mock<IStockRepository>();
+            _loggerMock = new Mock<ILogger<StocksService>>();
             _stockRepository = _stockRepositoryMock.Object;
-            _stocksService = new StocksService(_stockRepository);
+            _logger = _loggerMock.Object;
+            _stocksService = new StocksService(_stockRepository, _logger);
         }
         #region CreateBuyOrder
         // When you supply BuyOrderRequest as null, it should throw ArgumentNullException

@@ -18,7 +18,7 @@ namespace Entities
         [Required(ErrorMessage = "Stock Name is required")]
         [StringLength(100)]
         public string? StockName { get; set; }
-        public DateTime? DateAndTimeOfOrder { get; set; }
+        public DateTime DateAndTimeOfOrder { get; set; }
         [Range(1, 99999, ErrorMessage = "{0} shuold be between {1} and {2}")]
      
         public uint Quantity { get; set; }

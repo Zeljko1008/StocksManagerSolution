@@ -4,6 +4,7 @@ using Rotativa.AspNetCore;
 using ServiceContracts;
 using ServiceContracts.DTO;
 using Services;
+using StocksAppConfigAssignment.Filters.ActionFilters;
 using StocksAppConfigAssignment.Models;
 using System.Collections.Generic;
 
@@ -56,76 +57,27 @@ namespace StocksAppConfigAssignment.Controllers
 
         [HttpPost]
         [Route("[action]")]
-        public async Task<IActionResult> BuyOrder(BuyOrderRequest buyOrderRequest)
+        [TypeFilter(typeof(BuyAndSellOrderActionFilter))]
+        public async Task<IActionResult> BuyOrder(BuyOrderRequest orderRequest)
         {
-            ViewBag.currentUrl = HttpContext.Request.Path;
-            //Set the DateAndTimeOfOrder to the current date and time
-            buyOrderRequest.DateAndTimeOfOrder = DateTime.Now;
-            //re-validate the model
-            ModelState.Clear();
-            TryValidateModel(buyOrderRequest);
+           
+         BuyOrderResponse buyOrderResponse = await _stocksService.CreateBuyOrder(orderRequest);
 
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
-                StockTrade stock = new StockTrade()
-                {
-                    StockSymbol = buyOrderRequest.StockSymbol,
-                    StockName = buyOrderRequest.StockName,
-                    Quantity = buyOrderRequest.Quantity
-                };
-
-                return View("Index", stock);
-            }
-            BuyOrderResponse buyOrderResponse =await _stocksService.CreateBuyOrder(buyOrderRequest);
-            List<BuyOrderResponse> buyOrdersResponse = await _stocksService.GetBuyOrders();
-            List<SellOrderResponse> sellOrdersResponse = await _stocksService.GetSellOrders();
-
-            Orders orders = new Orders()
-            {
-                BuyOrders = buyOrdersResponse ?? new List<BuyOrderResponse>(),
-                SellOrders = sellOrdersResponse ?? new List<SellOrderResponse>()
-            };
-
-            return View("Orders", orders);
+         
+           
+            return RedirectToAction(nameof(Orders));
         }
 
         [HttpPost]
         [Route("[action]")]
-        public async Task<IActionResult> SellOrder(SellOrderRequest sellOrderRequest)
+        [TypeFilter(typeof(BuyAndSellOrderActionFilter))]
+        public async Task<IActionResult> SellOrder(SellOrderRequest orderRequest)
         {
-            ViewBag.currentUrl = HttpContext.Request.Path;
-            //Set the DateAndTimeOfOrder to the current date and time
-            sellOrderRequest.DateAndTimeOfOrder = DateTime.Now;
-            //re-validate the model
-            ModelState.Clear();
-            TryValidateModel(sellOrderRequest);
-
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
-                StockTrade stock = new StockTrade()
-                {
-                    StockSymbol = sellOrderRequest.StockSymbol,
-                    StockName = sellOrderRequest.StockName,
-                    Quantity = sellOrderRequest.Quantity
-                };
-
-                return View("Index", stock);
-            }
-            SellOrderResponse sellOrderResponse =await _stocksService.CreateSellOrder(sellOrderRequest);
-            List<BuyOrderResponse> buyOrdersResponse = await _stocksService.GetBuyOrders();
-            List<SellOrderResponse> sellOrdersResponse = await _stocksService.GetSellOrders();
-
-            Orders orders = new Orders()
-            {
-                BuyOrders = buyOrdersResponse ?? new List<BuyOrderResponse>(),
-                SellOrders = sellOrdersResponse ?? new List<SellOrderResponse>()
-            };
            
+            SellOrderResponse sellOrderResponse =await _stocksService.CreateSellOrder(orderRequest);
+            
 
-
-            return View("Orders", orders);
+            return RedirectToAction(nameof(Orders));
         }
 
         [HttpGet]
@@ -152,7 +104,7 @@ namespace StocksAppConfigAssignment.Controllers
         [Route("[action]")]
         public async Task<IActionResult> OrdersToPDF()
         {
-            List<IOrderResponsePdf> orders = new List<IOrderResponsePdf>();
+            List<IOrderResponse> orders = new List<IOrderResponse>();
             orders.AddRange(await _stocksService.GetBuyOrders());
             orders.AddRange(await _stocksService.GetSellOrders());
 

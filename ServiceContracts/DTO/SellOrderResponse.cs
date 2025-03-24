@@ -3,7 +3,7 @@ using static ServiceContracts.DTO.IOrderResponsePdf;
 namespace ServiceContracts.DTO
     
 {
-    public class SellOrderResponse :IOrderResponsePdf
+    public class SellOrderResponse :IOrderResponse
     {
         /// <summary>
         /// DTO class that is used as return type for the sell order response
@@ -11,7 +11,7 @@ namespace ServiceContracts.DTO
         public Guid SellOrderID { get; set; }
         public string? StockSymbol { get; set; }
         public string? StockName { get; set; }
-        public DateTime? DateAndTimeOfOrder { get; set; }
+        public DateTime DateAndTimeOfOrder { get; set; }
         public uint Quantity { get; set; }
         public decimal Price { get; set; }
 
@@ -20,8 +20,8 @@ namespace ServiceContracts.DTO
 
         public override string ToString()
         {
-            return $"BuyOrderID: {SellOrderID}, StockSymbol: {StockSymbol}," +
-                $" StockName: {StockName}, DateAndTimeOfOrder: {DateAndTimeOfOrder?.ToString("dd MMM yyyy")}," +
+            return $"SellOrderID: {SellOrderID}, StockSymbol: {StockSymbol}," +
+                $" StockName: {StockName}, DateAndTimeOfOrder: {DateAndTimeOfOrder.ToString("dd MMM yyyy")}," +
                 $" Quantity: {Quantity}, Price: {Price}, TradeAmount: {TradeAmount}";
         }
 

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ServiceContracts.DTO
 {
-    public class BuyOrderRequest
+    public class BuyOrderRequest :  IOrderRequest
     {
         /// <summary>
         /// DTO class for adding a new Buy Order
@@ -40,5 +40,7 @@ namespace ServiceContracts.DTO
                 $" StockName: {StockName}, DateAndTimeOfOrder: {DateAndTimeOfOrder.ToString("dd MMM yyyy")}," +
                 $" Quantity: {Quantity}, Price: {Price}";
         }
+
+       
     }
 }

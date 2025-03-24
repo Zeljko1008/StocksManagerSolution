@@ -1,0 +1,438 @@
+2025-03-22 17:39:20.238 +01:00 [INF] User profile is available. Using 'C:\Users\zac10\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-22 17:39:20.567 +01:00 [INF] Now listening on: http://localhost:5013
+2025-03-22 17:39:20.645 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-22 17:39:20.646 +01:00 [INF] Hosting environment: Development
+2025-03-22 17:39:20.648 +01:00 [INF] Content root path: C:\aspnetcore\StocksAppConfigAssignment\StocksAppConfigAssignment
+2025-03-22 17:39:21.641 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2025-03-22 17:39:21.845 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:39:21.902 +01:00 [INF] Route matched with {action = "Explore", controller = "Stock"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String, Boolean) on controller StocksAppConfigAssignment.Controllers.StockController (StocksAppConfigAssignment).
+2025-03-22 17:39:21.950 +01:00 [INF] Stock symbol received in Explore: null
+2025-03-22 17:39:21.962 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:39:21.965 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:39:22.939 +01:00 [INF] Received HTTP response headers after 970.9912ms - 200
+2025-03-22 17:39:22.942 +01:00 [INF] End processing HTTP request after 982.5256ms - 200
+2025-03-22 17:39:25.149 +01:00 [INF] Executing ViewResult, running view Explore.
+2025-03-22 17:39:25.476 +01:00 [INF] Executed ViewResult - view Explore executed in 328.967ms.
+2025-03-22 17:39:25.480 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment) in 3574.9312ms
+2025-03-22 17:39:25.483 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:39:25.491 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/StyleSheet.css - null null
+2025-03-22 17:39:25.492 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 200 null text/html; charset=utf-8 3864.892ms
+2025-03-22 17:39:25.501 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:39:25.504 +01:00 [INF] The file /StyleSheet.css was not modified
+2025-03-22 17:39:25.507 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:39:25.516 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 15.2665ms
+2025-03-22 17:39:25.516 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/StyleSheet.css - 304 null text/css 25.246ms
+2025-03-22 17:39:25.614 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 107.7169ms
+2025-03-22 17:39:25.651 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/favicon.ico - null null
+2025-03-22 17:39:25.662 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/favicon.ico - 404 0 null 10.8969ms
+2025-03-22 17:39:25.669 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5013/favicon.ico, Response status code: 404
+2025-03-22 17:39:39.336 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/Stock/Explore/MA - null null
+2025-03-22 17:39:39.344 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:39:39.348 +01:00 [INF] Route matched with {action = "Explore", controller = "Stock"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String, Boolean) on controller StocksAppConfigAssignment.Controllers.StockController (StocksAppConfigAssignment).
+2025-03-22 17:39:39.352 +01:00 [INF] Stock symbol received in Explore: MA
+2025-03-22 17:39:39.353 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:39:39.354 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:39:39.995 +01:00 [INF] Received HTTP response headers after 639.0517ms - 200
+2025-03-22 17:39:39.997 +01:00 [INF] End processing HTTP request after 643.7891ms - 200
+2025-03-22 17:39:41.113 +01:00 [INF] Executing ViewResult, running view Explore.
+2025-03-22 17:39:41.323 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:39:41.325 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:39:41.529 +01:00 [INF] Received HTTP response headers after 201.4991ms - 200
+2025-03-22 17:39:41.531 +01:00 [INF] End processing HTTP request after 207.8013ms - 200
+2025-03-22 17:39:41.536 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:39:41.537 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:39:41.732 +01:00 [INF] Received HTTP response headers after 193.5309ms - 200
+2025-03-22 17:39:41.734 +01:00 [INF] End processing HTTP request after 197.994ms - 200
+2025-03-22 17:39:41.744 +01:00 [INF] Executed ViewResult - view Explore executed in 631.4008ms.
+2025-03-22 17:39:41.747 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment) in 2396.2694ms
+2025-03-22 17:39:41.748 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:39:41.752 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/Stock/Explore/MA - 200 null text/html; charset=utf-8 2416.2647ms
+2025-03-22 17:39:41.769 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:39:41.769 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:39:41.773 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 4.0348ms
+2025-03-22 17:39:41.799 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.7638ms
+2025-03-22 17:39:44.088 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/Trade/Index/MA - null null
+2025-03-22 17:39:44.093 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment)'
+2025-03-22 17:39:44.099 +01:00 [INF] Route matched with {action = "Index", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller StocksAppConfigAssignment.Controllers.TradeController (StocksAppConfigAssignment).
+2025-03-22 17:39:44.113 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:39:44.114 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:39:44.294 +01:00 [INF] Received HTTP response headers after 178.0305ms - 200
+2025-03-22 17:39:44.295 +01:00 [INF] End processing HTTP request after 182.0585ms - 200
+2025-03-22 17:39:44.297 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:39:44.298 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:39:44.483 +01:00 [INF] Received HTTP response headers after 183.1581ms - 200
+2025-03-22 17:39:44.485 +01:00 [INF] End processing HTTP request after 187.9343ms - 200
+2025-03-22 17:39:44.586 +01:00 [INF] Executing ViewResult, running view Index.
+2025-03-22 17:39:44.774 +01:00 [INF] Executed ViewResult - view Index executed in 188.4215ms.
+2025-03-22 17:39:44.776 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment) in 675.0786ms
+2025-03-22 17:39:44.777 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment)'
+2025-03-22 17:39:44.778 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/Trade/Index/MA - 200 null text/html; charset=utf-8 690.9433ms
+2025-03-22 17:39:44.804 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:39:44.806 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:39:44.807 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 3.3161ms
+2025-03-22 17:39:44.829 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.3224ms
+2025-03-22 17:39:46.244 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5013/Trade/SellOrder - application/x-www-form-urlencoded 269
+2025-03-22 17:39:46.251 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.TradeController.SellOrder (StocksAppConfigAssignment)'
+2025-03-22 17:39:46.260 +01:00 [INF] Route matched with {action = "SellOrder", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SellOrder(ServiceContracts.DTO.SellOrderRequest) on controller StocksAppConfigAssignment.Controllers.TradeController (StocksAppConfigAssignment).
+2025-03-22 17:39:46.280 +01:00 [INF] CreateSellOrder called
+2025-03-22 17:39:46.284 +01:00 [INF] [CreateSellOrder] DateAndTimeOfOrder pre validacije: 01/01/0001 00:00:00
+2025-03-22 17:39:46.536 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.TradeController.SellOrder (StocksAppConfigAssignment) in 273.1604ms
+2025-03-22 17:39:46.581 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.TradeController.SellOrder (StocksAppConfigAssignment)'
+2025-03-22 17:39:46.649 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The year should be not be older than 2000
+   at Services.Helpers.ValidationHelper.ModelValidation(Object obj) in C:\aspnetcore\StocksAppConfigAssignment\Services\Helpers\ValidationHelper.cs:line 22
+   at Services.StocksService.CreateSellOrder(SellOrderRequest sellOrderRequest) in C:\aspnetcore\StocksAppConfigAssignment\Services\StocksService.cs:line 65
+   at StocksAppConfigAssignment.Controllers.TradeController.SellOrder(SellOrderRequest orderRequest) in C:\aspnetcore\StocksAppConfigAssignment\StocksAppConfigAssignment\Controllers\TradeController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-22 17:39:46.747 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5013/Trade/SellOrder - 500 null text/html; charset=utf-8 502.8313ms
+2025-03-22 17:39:46.768 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:39:46.769 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:39:46.776 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 6.4132ms
+2025-03-22 17:39:46.778 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.0054ms
+2025-03-22 17:45:54.179 +01:00 [INF] User profile is available. Using 'C:\Users\zac10\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-22 17:45:54.433 +01:00 [INF] Now listening on: http://localhost:5013
+2025-03-22 17:45:54.516 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-22 17:45:54.517 +01:00 [INF] Hosting environment: Development
+2025-03-22 17:45:54.518 +01:00 [INF] Content root path: C:\aspnetcore\StocksAppConfigAssignment\StocksAppConfigAssignment
+2025-03-22 17:45:54.843 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2025-03-22 17:45:54.987 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:45:55.034 +01:00 [INF] Route matched with {action = "Explore", controller = "Stock"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String, Boolean) on controller StocksAppConfigAssignment.Controllers.StockController (StocksAppConfigAssignment).
+2025-03-22 17:45:55.078 +01:00 [INF] Stock symbol received in Explore: null
+2025-03-22 17:45:55.091 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:45:55.097 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:45:56.013 +01:00 [INF] Received HTTP response headers after 912.8071ms - 200
+2025-03-22 17:45:56.016 +01:00 [INF] End processing HTTP request after 928.7371ms - 200
+2025-03-22 17:45:58.995 +01:00 [INF] Executing ViewResult, running view Explore.
+2025-03-22 17:45:59.322 +01:00 [INF] Executed ViewResult - view Explore executed in 330.0509ms.
+2025-03-22 17:45:59.328 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment) in 4289.1415ms
+2025-03-22 17:45:59.330 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:45:59.340 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 200 null text/html; charset=utf-8 4506.4882ms
+2025-03-22 17:45:59.347 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:45:59.353 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 6.1987ms
+2025-03-22 17:45:59.354 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:45:59.411 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.6069ms
+2025-03-22 17:46:03.779 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/Stock/Explore/META - null null
+2025-03-22 17:46:03.790 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:46:03.797 +01:00 [INF] Route matched with {action = "Explore", controller = "Stock"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String, Boolean) on controller StocksAppConfigAssignment.Controllers.StockController (StocksAppConfigAssignment).
+2025-03-22 17:46:03.800 +01:00 [INF] Stock symbol received in Explore: META
+2025-03-22 17:46:03.801 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:46:03.802 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:46:04.412 +01:00 [INF] Received HTTP response headers after 608.1502ms - 200
+2025-03-22 17:46:04.414 +01:00 [INF] End processing HTTP request after 613.1096ms - 200
+2025-03-22 17:46:05.594 +01:00 [INF] Executing ViewResult, running view Explore.
+2025-03-22 17:46:05.732 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:46:05.734 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:46:05.940 +01:00 [INF] Received HTTP response headers after 204.514ms - 200
+2025-03-22 17:46:05.942 +01:00 [INF] End processing HTTP request after 210.0515ms - 200
+2025-03-22 17:46:05.947 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:46:05.948 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:46:06.135 +01:00 [INF] Received HTTP response headers after 185.1132ms - 200
+2025-03-22 17:46:06.137 +01:00 [INF] End processing HTTP request after 189.8738ms - 200
+2025-03-22 17:46:06.147 +01:00 [INF] Executed ViewResult - view Explore executed in 553.0269ms.
+2025-03-22 17:46:06.151 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment) in 2352.1014ms
+2025-03-22 17:46:06.152 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:46:06.156 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/Stock/Explore/META - 200 null text/html; charset=utf-8 2376.4652ms
+2025-03-22 17:46:06.166 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:46:06.166 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:46:06.170 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 3.1286ms
+2025-03-22 17:46:06.193 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.2001ms
+2025-03-22 17:46:07.363 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/Trade/Index/META - null null
+2025-03-22 17:46:07.371 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment)'
+2025-03-22 17:46:07.377 +01:00 [INF] Route matched with {action = "Index", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller StocksAppConfigAssignment.Controllers.TradeController (StocksAppConfigAssignment).
+2025-03-22 17:46:07.388 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:46:07.390 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:46:07.585 +01:00 [INF] Received HTTP response headers after 193.5326ms - 200
+2025-03-22 17:46:07.586 +01:00 [INF] End processing HTTP request after 198.3206ms - 200
+2025-03-22 17:46:07.588 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:46:07.589 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:46:07.780 +01:00 [INF] Received HTTP response headers after 189.6391ms - 200
+2025-03-22 17:46:07.782 +01:00 [INF] End processing HTTP request after 194.1289ms - 200
+2025-03-22 17:46:07.893 +01:00 [INF] Executing ViewResult, running view Index.
+2025-03-22 17:46:08.097 +01:00 [INF] Executed ViewResult - view Index executed in 203.9423ms.
+2025-03-22 17:46:08.098 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment) in 719.906ms
+2025-03-22 17:46:08.100 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment)'
+2025-03-22 17:46:08.102 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/Trade/Index/META - 200 null text/html; charset=utf-8 739.2631ms
+2025-03-22 17:46:08.116 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:46:08.117 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:46:08.120 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 3.1407ms
+2025-03-22 17:46:08.132 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.3096ms
+2025-03-22 17:46:09.381 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5013/Trade/SellOrder - application/x-www-form-urlencoded 275
+2025-03-22 17:46:09.386 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.TradeController.SellOrder (StocksAppConfigAssignment)'
+2025-03-22 17:46:09.397 +01:00 [INF] Route matched with {action = "SellOrder", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SellOrder(ServiceContracts.DTO.SellOrderRequest) on controller StocksAppConfigAssignment.Controllers.TradeController (StocksAppConfigAssignment).
+2025-03-22 17:46:09.417 +01:00 [INF] CreateSellOrder called
+2025-03-22 17:46:09.423 +01:00 [INF] [CreateSellOrder] DateAndTimeOfOrder pre validacije: 01/01/0001 00:00:00
+2025-03-22 17:46:09.707 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.TradeController.SellOrder (StocksAppConfigAssignment) in 307.5651ms
+2025-03-22 17:46:09.757 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.TradeController.SellOrder (StocksAppConfigAssignment)'
+2025-03-22 17:46:09.831 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The year should be not be older than 2000
+   at Services.Helpers.ValidationHelper.ModelValidation(Object obj) in C:\aspnetcore\StocksAppConfigAssignment\Services\Helpers\ValidationHelper.cs:line 22
+   at Services.StocksService.CreateSellOrder(SellOrderRequest sellOrderRequest) in C:\aspnetcore\StocksAppConfigAssignment\Services\StocksService.cs:line 65
+   at StocksAppConfigAssignment.Controllers.TradeController.SellOrder(SellOrderRequest orderRequest) in C:\aspnetcore\StocksAppConfigAssignment\StocksAppConfigAssignment\Controllers\TradeController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-22 17:46:09.869 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5013/Trade/SellOrder - 500 null text/html; charset=utf-8 488.3034ms
+2025-03-22 17:46:09.886 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:46:09.887 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:46:09.897 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 10.6269ms
+2025-03-22 17:46:09.902 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.2301ms
+2025-03-22 17:54:32.773 +01:00 [INF] User profile is available. Using 'C:\Users\zac10\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-22 17:54:33.009 +01:00 [INF] Now listening on: http://localhost:5013
+2025-03-22 17:54:33.066 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-22 17:54:33.067 +01:00 [INF] Hosting environment: Development
+2025-03-22 17:54:33.068 +01:00 [INF] Content root path: C:\aspnetcore\StocksAppConfigAssignment\StocksAppConfigAssignment
+2025-03-22 17:54:33.497 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2025-03-22 17:54:33.653 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:54:33.697 +01:00 [INF] Route matched with {action = "Explore", controller = "Stock"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String, Boolean) on controller StocksAppConfigAssignment.Controllers.StockController (StocksAppConfigAssignment).
+2025-03-22 17:54:33.729 +01:00 [INF] Stock symbol received in Explore: null
+2025-03-22 17:54:33.739 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:54:33.743 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:54:34.843 +01:00 [INF] Received HTTP response headers after 1095.9207ms - 200
+2025-03-22 17:54:34.846 +01:00 [INF] End processing HTTP request after 1109.5046ms - 200
+2025-03-22 17:54:36.544 +01:00 [INF] Executing ViewResult, running view Explore.
+2025-03-22 17:54:36.853 +01:00 [INF] Executed ViewResult - view Explore executed in 312.8845ms.
+2025-03-22 17:54:36.856 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment) in 3156.4297ms
+2025-03-22 17:54:36.858 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:54:36.863 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 200 null text/html; charset=utf-8 3379.4821ms
+2025-03-22 17:54:36.872 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:54:36.875 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:54:36.878 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 6.3248ms
+2025-03-22 17:54:36.914 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.5288ms
+2025-03-22 17:54:38.825 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/Stock/Explore/COST - null null
+2025-03-22 17:54:38.836 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:54:38.843 +01:00 [INF] Route matched with {action = "Explore", controller = "Stock"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String, Boolean) on controller StocksAppConfigAssignment.Controllers.StockController (StocksAppConfigAssignment).
+2025-03-22 17:54:38.847 +01:00 [INF] Stock symbol received in Explore: COST
+2025-03-22 17:54:38.849 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:54:38.850 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:54:39.744 +01:00 [INF] Received HTTP response headers after 892.8905ms - 200
+2025-03-22 17:54:39.746 +01:00 [INF] End processing HTTP request after 897.4812ms - 200
+2025-03-22 17:54:40.798 +01:00 [INF] Executing ViewResult, running view Explore.
+2025-03-22 17:54:40.929 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:54:40.931 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:54:41.172 +01:00 [INF] Received HTTP response headers after 240.2816ms - 200
+2025-03-22 17:54:41.174 +01:00 [INF] End processing HTTP request after 244.7992ms - 200
+2025-03-22 17:54:41.178 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:54:41.180 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:54:41.370 +01:00 [INF] Received HTTP response headers after 189.6724ms - 200
+2025-03-22 17:54:41.372 +01:00 [INF] End processing HTTP request after 193.4836ms - 200
+2025-03-22 17:54:41.387 +01:00 [INF] Executed ViewResult - view Explore executed in 589.2347ms.
+2025-03-22 17:54:41.390 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment) in 2544.1841ms
+2025-03-22 17:54:41.391 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:54:41.396 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/Stock/Explore/COST - 200 null text/html; charset=utf-8 2570.7067ms
+2025-03-22 17:54:41.404 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:54:41.404 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:54:41.411 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 7.7078ms
+2025-03-22 17:54:41.427 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.4383ms
+2025-03-22 17:55:04.262 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/Stock/Explore/V - null null
+2025-03-22 17:55:04.280 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:55:04.283 +01:00 [INF] Route matched with {action = "Explore", controller = "Stock"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String, Boolean) on controller StocksAppConfigAssignment.Controllers.StockController (StocksAppConfigAssignment).
+2025-03-22 17:55:04.285 +01:00 [INF] Stock symbol received in Explore: V
+2025-03-22 17:55:04.286 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:55:04.287 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:55:05.253 +01:00 [INF] Received HTTP response headers after 964.9517ms - 200
+2025-03-22 17:55:05.255 +01:00 [INF] End processing HTTP request after 969.271ms - 200
+2025-03-22 17:55:06.480 +01:00 [INF] Executing ViewResult, running view Explore.
+2025-03-22 17:55:06.489 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:55:06.490 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:55:06.714 +01:00 [INF] Received HTTP response headers after 223.4572ms - 200
+2025-03-22 17:55:06.716 +01:00 [INF] End processing HTTP request after 227.0447ms - 200
+2025-03-22 17:55:06.717 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:55:06.718 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:55:06.907 +01:00 [INF] Received HTTP response headers after 188.3545ms - 200
+2025-03-22 17:55:06.909 +01:00 [INF] End processing HTTP request after 192.2724ms - 200
+2025-03-22 17:55:06.913 +01:00 [INF] Executed ViewResult - view Explore executed in 433.8874ms.
+2025-03-22 17:55:06.915 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment) in 2630.5025ms
+2025-03-22 17:55:06.916 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:55:06.918 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/Stock/Explore/V - 200 null text/html; charset=utf-8 2656.2401ms
+2025-03-22 17:55:06.938 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:55:06.938 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:55:06.941 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 3.5674ms
+2025-03-22 17:55:06.953 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.1883ms
+2025-03-22 17:55:09.696 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/Trade/Index/V - null null
+2025-03-22 17:55:09.702 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment)'
+2025-03-22 17:55:09.708 +01:00 [INF] Route matched with {action = "Index", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller StocksAppConfigAssignment.Controllers.TradeController (StocksAppConfigAssignment).
+2025-03-22 17:55:09.719 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:55:09.720 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:55:09.908 +01:00 [INF] Received HTTP response headers after 186.4404ms - 200
+2025-03-22 17:55:09.910 +01:00 [INF] End processing HTTP request after 190.6475ms - 200
+2025-03-22 17:55:09.912 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:55:09.913 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:55:10.103 +01:00 [INF] Received HTTP response headers after 189.0101ms - 200
+2025-03-22 17:55:10.105 +01:00 [INF] End processing HTTP request after 193.9433ms - 200
+2025-03-22 17:55:10.210 +01:00 [INF] Executing ViewResult, running view Index.
+2025-03-22 17:55:10.398 +01:00 [INF] Executed ViewResult - view Index executed in 187.6926ms.
+2025-03-22 17:55:10.400 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment) in 689.6826ms
+2025-03-22 17:55:10.401 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment)'
+2025-03-22 17:55:10.403 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/Trade/Index/V - 200 null text/html; charset=utf-8 707.3732ms
+2025-03-22 17:55:10.416 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:55:10.417 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:55:10.419 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 3.08ms
+2025-03-22 17:55:10.436 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.3083ms
+2025-03-22 17:55:11.645 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5013/Trade/SellOrder - application/x-www-form-urlencoded 262
+2025-03-22 17:55:11.651 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.TradeController.SellOrder (StocksAppConfigAssignment)'
+2025-03-22 17:55:11.661 +01:00 [INF] Route matched with {action = "SellOrder", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SellOrder(ServiceContracts.DTO.SellOrderRequest) on controller StocksAppConfigAssignment.Controllers.TradeController (StocksAppConfigAssignment).
+2025-03-22 17:55:11.678 +01:00 [INF] CreateSellOrder called
+2025-03-22 17:55:11.684 +01:00 [INF] [CreateSellOrder] DateAndTimeOfOrder pre validacije: 01/01/0001 00:00:00
+2025-03-22 17:55:11.896 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.TradeController.SellOrder (StocksAppConfigAssignment) in 233.0063ms
+2025-03-22 17:55:11.931 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.TradeController.SellOrder (StocksAppConfigAssignment)'
+2025-03-22 17:55:11.980 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The year should be not be older than 2000
+   at Services.Helpers.ValidationHelper.ModelValidation(Object obj) in C:\aspnetcore\StocksAppConfigAssignment\Services\Helpers\ValidationHelper.cs:line 22
+   at Services.StocksService.CreateSellOrder(SellOrderRequest sellOrderRequest) in C:\aspnetcore\StocksAppConfigAssignment\Services\StocksService.cs:line 65
+   at StocksAppConfigAssignment.Controllers.TradeController.SellOrder(SellOrderRequest orderRequest) in C:\aspnetcore\StocksAppConfigAssignment\StocksAppConfigAssignment\Controllers\TradeController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-22 17:55:12.018 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5013/Trade/SellOrder - 500 null text/html; charset=utf-8 373.5052ms
+2025-03-22 17:55:12.036 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:55:12.037 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:55:12.046 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 6.9394ms
+2025-03-22 17:55:12.051 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.4955ms
+2025-03-22 17:56:01.335 +01:00 [INF] User profile is available. Using 'C:\Users\zac10\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-22 17:56:01.518 +01:00 [INF] Now listening on: http://localhost:5013
+2025-03-22 17:56:01.569 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-22 17:56:01.570 +01:00 [INF] Hosting environment: Development
+2025-03-22 17:56:01.571 +01:00 [INF] Content root path: C:\aspnetcore\StocksAppConfigAssignment\StocksAppConfigAssignment
+2025-03-22 17:56:01.884 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2025-03-22 17:56:02.036 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:56:02.087 +01:00 [INF] Route matched with {action = "Explore", controller = "Stock"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String, Boolean) on controller StocksAppConfigAssignment.Controllers.StockController (StocksAppConfigAssignment).
+2025-03-22 17:56:02.122 +01:00 [INF] Stock symbol received in Explore: null
+2025-03-22 17:56:02.133 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:56:02.136 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:56:03.062 +01:00 [INF] Received HTTP response headers after 922.5165ms - 200
+2025-03-22 17:56:03.066 +01:00 [INF] End processing HTTP request after 935.4011ms - 200
+2025-03-22 17:56:06.170 +01:00 [INF] Executing ViewResult, running view Explore.
+2025-03-22 17:56:06.521 +01:00 [INF] Executed ViewResult - view Explore executed in 353.3818ms.
+2025-03-22 17:56:06.526 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment) in 4436.4862ms
+2025-03-22 17:56:06.529 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:56:06.538 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 200 null text/html; charset=utf-8 4661.6444ms
+2025-03-22 17:56:06.547 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:56:06.554 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 7.8108ms
+2025-03-22 17:56:06.560 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:56:06.619 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.9659ms
+2025-03-22 17:56:08.585 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/Stock/Explore/GOOGL - null null
+2025-03-22 17:56:08.598 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:56:08.603 +01:00 [INF] Route matched with {action = "Explore", controller = "Stock"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Explore(System.String, Boolean) on controller StocksAppConfigAssignment.Controllers.StockController (StocksAppConfigAssignment).
+2025-03-22 17:56:08.607 +01:00 [INF] Stock symbol received in Explore: GOOGL
+2025-03-22 17:56:08.608 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:56:08.610 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/symbol?*
+2025-03-22 17:56:09.378 +01:00 [INF] Received HTTP response headers after 767.8209ms - 200
+2025-03-22 17:56:09.380 +01:00 [INF] End processing HTTP request after 771.7203ms - 200
+2025-03-22 17:56:11.235 +01:00 [INF] Executing ViewResult, running view Explore.
+2025-03-22 17:56:11.374 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:56:11.376 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:56:11.569 +01:00 [INF] Received HTTP response headers after 191.9825ms - 200
+2025-03-22 17:56:11.572 +01:00 [INF] End processing HTTP request after 197.7123ms - 200
+2025-03-22 17:56:11.577 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:56:11.579 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:56:11.754 +01:00 [INF] Received HTTP response headers after 173.1214ms - 200
+2025-03-22 17:56:11.756 +01:00 [INF] End processing HTTP request after 178.8907ms - 200
+2025-03-22 17:56:11.766 +01:00 [INF] Executed ViewResult - view Explore executed in 530.7073ms.
+2025-03-22 17:56:11.768 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment) in 3162.707ms
+2025-03-22 17:56:11.770 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.StockController.Explore (StocksAppConfigAssignment)'
+2025-03-22 17:56:11.774 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/Stock/Explore/GOOGL - 200 null text/html; charset=utf-8 3188.8117ms
+2025-03-22 17:56:11.788 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:56:11.788 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:56:11.791 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 3.4748ms
+2025-03-22 17:56:11.818 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.1585ms
+2025-03-22 17:56:14.436 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/Trade/Index/GOOGL - null null
+2025-03-22 17:56:14.443 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment)'
+2025-03-22 17:56:14.447 +01:00 [INF] Route matched with {action = "Index", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller StocksAppConfigAssignment.Controllers.TradeController (StocksAppConfigAssignment).
+2025-03-22 17:56:14.461 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:56:14.462 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/quote?*
+2025-03-22 17:56:14.677 +01:00 [INF] Received HTTP response headers after 213.903ms - 200
+2025-03-22 17:56:14.678 +01:00 [INF] End processing HTTP request after 217.7712ms - 200
+2025-03-22 17:56:14.680 +01:00 [INF] Start processing HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:56:14.681 +01:00 [INF] Sending HTTP request GET https://finnhub.io/api/v1/stock/profile2?*
+2025-03-22 17:56:14.927 +01:00 [INF] Received HTTP response headers after 244.7614ms - 200
+2025-03-22 17:56:14.929 +01:00 [INF] End processing HTTP request after 248.9126ms - 200
+2025-03-22 17:56:15.035 +01:00 [INF] Executing ViewResult, running view Index.
+2025-03-22 17:56:15.230 +01:00 [INF] Executed ViewResult - view Index executed in 194.8545ms.
+2025-03-22 17:56:15.232 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment) in 782.065ms
+2025-03-22 17:56:15.234 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.TradeController.Index (StocksAppConfigAssignment)'
+2025-03-22 17:56:15.236 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/Trade/Index/GOOGL - 200 null text/html; charset=utf-8 799.7241ms
+2025-03-22 17:56:15.249 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:56:15.250 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:56:15.252 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 3.6179ms
+2025-03-22 17:56:15.266 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.7651ms
+2025-03-22 17:56:16.897 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5013/Trade/BuyOrder - application/x-www-form-urlencoded 270
+2025-03-22 17:56:16.902 +01:00 [INF] Executing endpoint 'StocksAppConfigAssignment.Controllers.TradeController.BuyOrder (StocksAppConfigAssignment)'
+2025-03-22 17:56:16.910 +01:00 [INF] Route matched with {action = "BuyOrder", controller = "Trade"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BuyOrder(ServiceContracts.DTO.BuyOrderRequest) on controller StocksAppConfigAssignment.Controllers.TradeController (StocksAppConfigAssignment).
+2025-03-22 17:56:16.930 +01:00 [INF] CreateBuyOrder called
+2025-03-22 17:56:17.197 +01:00 [INF] Executed action StocksAppConfigAssignment.Controllers.TradeController.BuyOrder (StocksAppConfigAssignment) in 284.7621ms
+2025-03-22 17:56:17.247 +01:00 [INF] Executed endpoint 'StocksAppConfigAssignment.Controllers.TradeController.BuyOrder (StocksAppConfigAssignment)'
+2025-03-22 17:56:17.324 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The year should be not be older than 2000
+   at Services.Helpers.ValidationHelper.ModelValidation(Object obj) in C:\aspnetcore\StocksAppConfigAssignment\Services\Helpers\ValidationHelper.cs:line 22
+   at Services.StocksService.CreateBuyOrder(BuyOrderRequest buyOrderRequest) in C:\aspnetcore\StocksAppConfigAssignment\Services\StocksService.cs:line 41
+   at StocksAppConfigAssignment.Controllers.TradeController.BuyOrder(BuyOrderRequest orderRequest) in C:\aspnetcore\StocksAppConfigAssignment\StocksAppConfigAssignment\Controllers\TradeController.cs:line 64
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-22 17:56:17.369 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5013/Trade/BuyOrder - 500 null text/html; charset=utf-8 472.7301ms
+2025-03-22 17:56:17.385 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_vs/browserLink - null null
+2025-03-22 17:56:17.386 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-22 17:56:17.393 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 7.0789ms
+2025-03-22 17:56:17.396 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.3022ms

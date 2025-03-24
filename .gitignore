@@ -48,3 +48,6 @@ appsettings.Development.json
 
 # JetBrains Rider
 .idea/
+# Ignore build and temp files
+bin/
+obj/

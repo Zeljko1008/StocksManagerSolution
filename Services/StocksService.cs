@@ -1,5 +1,6 @@
 ﻿using Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using RepositoryContracts;
 using ServiceContracts;
 using ServiceContracts.DTO;
@@ -17,15 +18,22 @@ namespace Services
     {
        
         private readonly IStockRepository _stockRepository;
+        private readonly ILogger<StocksService> _logger;
 
-        public StocksService(IStockRepository stockRepository) 
+        public StocksService(IStockRepository stockRepository, ILogger<StocksService> logger ) 
         {
           
             _stockRepository = stockRepository;
+            _logger = logger;
         }
         public async Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
         {
-            if(buyOrderRequest == null)
+            //logging
+            _logger.LogInformation("CreateBuyOrder called");
+         
+
+
+            if (buyOrderRequest == null)
             {
                 throw new ArgumentNullException(nameof(buyOrderRequest));
             }
@@ -45,7 +53,11 @@ namespace Services
 
         public async Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrderRequest)
         {
-           if(sellOrderRequest == null)
+            //logging
+            _logger.LogInformation("CreateSellOrder called");
+            _logger.LogInformation($"[CreateSellOrder] DateAndTimeOfOrder pre validacije: {sellOrderRequest.DateAndTimeOfOrder}");
+
+            if (sellOrderRequest == null)
             {
                 throw new ArgumentNullException(nameof(sellOrderRequest));
             }
@@ -64,6 +76,9 @@ namespace Services
 
         public async Task<List<BuyOrderResponse>> GetBuyOrders()
         {
+            //logging
+            _logger.LogInformation("GetBuyOrders called");
+
             List<BuyOrder> buyOrders = await _stockRepository.GetBuyOrders();   
                
             return buyOrders.Select(buyOrder => buyOrder.ToBuyOrderResponse()).ToList();
@@ -71,7 +86,9 @@ namespace Services
 
         public async Task<List<SellOrderResponse>> GetSellOrders()
         {
-           List<SellOrder> sellOrders = await _stockRepository.GetSellOrders();
+            //loging 
+            _logger.LogInformation("GetSellOrders called");
+            List<SellOrder> sellOrders = await _stockRepository.GetSellOrders();
             return sellOrders.Select(sellOrder => sellOrder.ToSellOrderResponse()).ToList();
         }
     }

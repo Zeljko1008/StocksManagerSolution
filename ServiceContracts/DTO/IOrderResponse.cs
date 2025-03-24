@@ -6,27 +6,24 @@ using System.Threading.Tasks;
 
 namespace ServiceContracts.DTO
 {
-   public interface IOrderResponsePdf
+    public interface IOrderResponse
     {
-       
+
         public string StockSymbol { get; set; }
-
         public string StockName { get; set; }
-
         public DateTime DateAndTimeOfOrder { get; set; }
-
         public uint Quantity { get; set; }
-
         public decimal Price { get; set; }
+        OrderType TypeOfOrder { get; }
 
-       public OrderType TypeOfOrder { get;  }
+        decimal TradeAmount { get; set; }
+    }
 
-        public decimal TradeAmount { get; set; }
-
-        public enum OrderType
-        {
-            BuyOrder,
-            SellOrder
-        }
+    public enum OrderType
+    {
+        BuyOrder, SellOrder
     }
 }
+
+
+

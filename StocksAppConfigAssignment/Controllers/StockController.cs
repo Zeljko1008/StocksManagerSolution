@@ -10,11 +10,13 @@ namespace StocksAppConfigAssignment.Controllers
     {
         private readonly StockOptions _stockOptions;
         private readonly IFinnHubService _finnHubService;
+        private readonly ILogger<StockController> _logger;
 
-        public StockController(IOptions<StockOptions> stockOptions, IFinnHubService finnHubService) 
+        public StockController(IOptions<StockOptions> stockOptions, IFinnHubService finnHubService, ILogger<StockController> logger) 
         { 
             _stockOptions= stockOptions.Value;
             _finnHubService = finnHubService;
+            _logger = logger;
 
         }
 
@@ -23,6 +25,9 @@ namespace StocksAppConfigAssignment.Controllers
        
         public async Task<IActionResult> Explore(string? stock, bool showAll=false)
         {
+            //logg
+            _logger.LogInformation("Stock symbol received in Explore: {StockSymbol}", stock);
+
             //get company profile from server
 
             List<Dictionary<string, string>>? stockDictionary = await _finnHubService.GetStocks();

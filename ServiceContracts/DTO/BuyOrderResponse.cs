@@ -3,7 +3,7 @@ using static ServiceContracts.DTO.IOrderResponsePdf;
 
 namespace ServiceContracts.DTO
 {
-    public class BuyOrderResponse : IOrderResponsePdf
+    public class BuyOrderResponse : IOrderResponse
     {
         /// <summary>
         /// DTO class that is used as return type for the buy order response
@@ -11,7 +11,7 @@ namespace ServiceContracts.DTO
         public Guid? BuyOrderID { get; set; }
         public string? StockSymbol { get; set; }
         public string? StockName { get; set; }
-        public DateTime? DateAndTimeOfOrder { get; set; }
+        public DateTime DateAndTimeOfOrder { get; set; }
         public uint Quantity { get; set; }
         public decimal Price { get; set; }
 
@@ -21,7 +21,7 @@ namespace ServiceContracts.DTO
         public override string ToString()
         {
             return $"BuyOrderID: {BuyOrderID}, StockSymbol: {StockSymbol}," +
-                $" StockName: {StockName}, DateAndTimeOfOrder: {DateAndTimeOfOrder?.ToString("dd MMM yyyy")}," +
+                $" StockName: {StockName}, DateAndTimeOfOrder: {DateAndTimeOfOrder.ToString("dd MMM yyyy")}," +
                 $" Quantity: {Quantity}, Price: {Price}, TradeAmount: {TradeAmount}";
         }
         public override bool Equals(object? obj)

@@ -5,7 +5,7 @@ using static ServiceContracts.DTO.IOrderResponsePdf;
 
 namespace ServiceContracts.DTO
 {
-    public class SellOrderRequest
+    public class SellOrderRequest :IOrderRequest
     {
         /// <summary>
         /// DTO class for adding a new Sell Order
@@ -25,6 +25,9 @@ namespace ServiceContracts.DTO
 
         [Range(1, 99999.99, ErrorMessage = "{0} shuold be between {1} and {2}")]
         public decimal Price { get; set; }
+        public OrderType TypeOfOrder => OrderType.SellOrder;
+
+        public decimal TradeAmount { get; set; }
 
         public SellOrder ToSellOrder()
         {
@@ -37,6 +40,13 @@ namespace ServiceContracts.DTO
                 Price = Price
             };
         }
+        public override string ToString()
+        {
+            return $"StockSymbol: {StockSymbol}," +
+                $" StockName: {StockName}, DateAndTimeOfOrder: {DateAndTimeOfOrder.ToString("dd MMM yyyy")}," +
+                $" Quantity: {Quantity}, Price: {Price}";
+        }
+
     }
 }
 
