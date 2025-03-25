@@ -32,7 +32,7 @@ namespace StocksAppConfigAssignment.ViewComponents
              var stockPriceDictionary = await _finnhubService.GetStockPriceQuote(stockSymbol);
                 if (companyProfileDictionary != null && stockPriceDictionary != null)
                 {
-                    Console.WriteLine($"Stock found: {companyProfileDictionary["name"]}");
+
                     companyProfileDictionary.Add("price", stockPriceDictionary["c"]);
                 }
             }

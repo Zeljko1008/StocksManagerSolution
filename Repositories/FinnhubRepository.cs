@@ -20,8 +20,10 @@ namespace Repositories
 
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage()
             {
-                RequestUri = new Uri($"https://finnhub.io/api/v1/quote?symbol={stockSymbol}" +
+                RequestUri = new Uri($"https://finnhub.io/api/v1/stock/profile2?symbol={stockSymbol}" +
                  $"&token={_configuration["FinnHubToken"]}"),
+
+               
                 Method = HttpMethod.Get
             };
 
@@ -52,7 +54,7 @@ namespace Repositories
            HttpClient httpClient = _httpClientFactory.CreateClient();
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage()
             {
-                RequestUri = new Uri($"https://finnhub.io/api/v1/stock/profile2?symbol={stockSymbol}" +
+                RequestUri = new Uri($"https://finnhub.io/api/v1/quote?symbol={stockSymbol}" +
                  $"&token={_configuration["FinnHubToken"]}"),
                 Method = HttpMethod.Get
             };
