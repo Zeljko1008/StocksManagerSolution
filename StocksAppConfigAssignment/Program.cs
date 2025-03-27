@@ -22,9 +22,13 @@ builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider servicePro
 builder.Services.AddControllersWithViews();
 
 builder.Services.Configure<StockOptions>(builder.Configuration.GetSection("TradingOptions"));
-builder.Services.AddHttpClient<FinnHubService>();
-builder.Services.AddScoped<IFinnHubService, FinnHubService>();
-builder.Services.AddScoped<IStockService, StocksService>();
+builder.Services.AddHttpClient<FinnHubGetCompanyProfileService>();
+builder.Services.AddScoped<IFinnHubGetStocksService, FinnHubGetStocksService>();
+builder.Services.AddScoped<IFinnHubGetCompanyProfileService, FinnHubGetCompanyProfileService>();
+builder.Services.AddScoped<IFinnHubSearchStockService, FinnHubSearchStockService>();
+builder.Services.AddScoped<IFinnHubStockPriceQuoteService, FinnHubStockPriceQuoteService>();
+builder.Services.AddScoped<IStockServiceCreateOrder, StocksServiceCreateOrder>();
+builder.Services.AddScoped<IStockServiceGetters, StocksServiceGetters>();
 builder.Services.AddScoped<IStockRepository, StockRepository>();
 builder.Services.AddScoped<IFinnHubRepository, FinnhubRepository>();
 

@@ -9,13 +9,13 @@ namespace StocksAppConfigAssignment.Controllers
     public class StockController : Controller
     {
         private readonly StockOptions _stockOptions;
-        private readonly IFinnHubService _finnHubService;
+        private readonly IFinnHubGetStocksService _finnHubGetStocksService;
         private readonly ILogger<StockController> _logger;
 
-        public StockController(IOptions<StockOptions> stockOptions, IFinnHubService finnHubService, ILogger<StockController> logger) 
+        public StockController(IOptions<StockOptions> stockOptions, IFinnHubGetStocksService finnHubGetStocksService, ILogger<StockController> logger) 
         { 
             _stockOptions= stockOptions.Value;
-            _finnHubService = finnHubService;
+            _finnHubGetStocksService = finnHubGetStocksService;
             _logger = logger;
 
         }
@@ -30,7 +30,7 @@ namespace StocksAppConfigAssignment.Controllers
 
             //get company profile from server
 
-            List<Dictionary<string, string>>? stockDictionary = await _finnHubService.GetStocks();
+            List<Dictionary<string, string>>? stockDictionary = await _finnHubGetStocksService.GetStocks();
 
             List<Stock> stocks = new List<Stock>();
 

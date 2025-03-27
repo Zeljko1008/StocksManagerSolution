@@ -4,7 +4,7 @@ namespace ServiceContracts.CustomValidators
 {
     public class MinimumYearValidator : ValidationAttribute
     {
-        public int MinimumYear { get; set; } = 0000;
+        public int MinimumYear { get; set; } = 2000;
         public string DefaultErrorMessage { get; set; } = "The year should be not be older than {0}";
 
         public MinimumYearValidator() { }

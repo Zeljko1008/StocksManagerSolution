@@ -6,16 +6,18 @@ namespace StocksAppConfigAssignment.ViewComponents
 {
     public class SelectedStockViewComponent : ViewComponent
     {
-        private readonly IFinnHubService _finnhubService;
-        private readonly IStockService _stockService;
+        private readonly IFinnHubGetCompanyProfileService _finnHubGetCompanyProfileService;
+        private readonly IFinnHubStockPriceQuoteService _finnHubStockPriceQuoteService;
+        private readonly IStockServiceCreateOrder _stockService;
         private readonly StockOptions _stockOptions;
         private readonly IConfiguration _configuration;
 
 
 
-        public SelectedStockViewComponent(IFinnHubService finnhubService, IStockService stockService, IOptions<StockOptions> stockOptions, IConfiguration configuration)
+        public SelectedStockViewComponent(IFinnHubGetCompanyProfileService finnHubGetCompanyProfileService,IFinnHubStockPriceQuoteService finnHubStockPriceQuoteService, IStockServiceCreateOrder stockService, IOptions<StockOptions> stockOptions, IConfiguration configuration)
         {
-            _finnhubService = finnhubService;
+            _finnHubGetCompanyProfileService = finnHubGetCompanyProfileService;
+            _finnHubStockPriceQuoteService = finnHubStockPriceQuoteService;
             _stockService = stockService;
             _stockOptions = stockOptions.Value;
             _configuration = configuration;
@@ -28,8 +30,8 @@ namespace StocksAppConfigAssignment.ViewComponents
             if (stockSymbol != null)
             {
                
-                companyProfileDictionary = await _finnhubService.GetCompanyProfile(stockSymbol);
-             var stockPriceDictionary = await _finnhubService.GetStockPriceQuote(stockSymbol);
+                companyProfileDictionary = await _finnHubGetCompanyProfileService.GetCompanyProfile(stockSymbol);
+             var stockPriceDictionary = await _finnHubStockPriceQuoteService.GetStockPriceQuote(stockSymbol);
                 if (companyProfileDictionary != null && stockPriceDictionary != null)
                 {
 

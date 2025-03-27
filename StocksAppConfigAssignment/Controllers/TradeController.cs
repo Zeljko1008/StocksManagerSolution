@@ -14,16 +14,21 @@ namespace StocksAppConfigAssignment.Controllers
     [Route("[controller]")]
     public class TradeController : Controller
     {
-        private readonly IFinnHubService _finnhubService;
+       
+        private readonly IFinnHubStockPriceQuoteService _finnHubStockPriceQuoteService;
+        private readonly IFinnHubGetCompanyProfileService _finnHubGetCompanyProfileService;
         private readonly StockOptions _stockOptions;
         private readonly IConfiguration _configuration;
-        private readonly IStockService _stocksService;
-        public TradeController(IFinnHubService finnhubService, IOptions<StockOptions>stockOptions, IConfiguration configuration, IStockService stocksService)
+        private readonly IStockServiceCreateOrder _stockServiceCreateOrder;
+        private readonly IStockServiceGetters _stockServiceGetters;
+        public TradeController(IFinnHubStockPriceQuoteService finnHubStockPriceQuoteService, IFinnHubGetCompanyProfileService finnHubGetCompanyProfileService ,IOptions<StockOptions>stockOptions, IConfiguration configuration, IStockServiceCreateOrder stocksServiceCreateOrder,IStockServiceGetters stockServiceGetters)
         {
-           _finnhubService = finnhubService;
+            _finnHubStockPriceQuoteService = finnHubStockPriceQuoteService;
+            _finnHubGetCompanyProfileService = finnHubGetCompanyProfileService;
             _stockOptions = stockOptions.Value;
             _configuration = configuration;
-            _stocksService = stocksService;
+            _stockServiceCreateOrder = stocksServiceCreateOrder;
+            _stockServiceGetters = stockServiceGetters;
         }
         [Route("[action]/{stockSymbol}")]
         public async Task<IActionResult> Index(string stockSymbol)
@@ -32,8 +37,8 @@ namespace StocksAppConfigAssignment.Controllers
             {
                 stockSymbol = "MSFT";
             }
-            Dictionary<string,object>? responseStockQuote= await _finnhubService.GetStockPriceQuote(stockSymbol);
-            Dictionary<string, object>? responseCompanyProfile =  await _finnhubService.GetCompanyProfile(stockSymbol);
+            Dictionary<string,object>? responseStockQuote= await _finnHubStockPriceQuoteService.GetStockPriceQuote(stockSymbol);
+            Dictionary<string, object>? responseCompanyProfile =  await _finnHubGetCompanyProfileService.GetCompanyProfile(stockSymbol);
 
             StockTrade stock = new StockTrade()
             {
@@ -61,7 +66,7 @@ namespace StocksAppConfigAssignment.Controllers
         public async Task<IActionResult> BuyOrder(BuyOrderRequest orderRequest)
         {
            
-         BuyOrderResponse buyOrderResponse = await _stocksService.CreateBuyOrder(orderRequest);
+         BuyOrderResponse buyOrderResponse = await _stockServiceCreateOrder.CreateBuyOrder(orderRequest);
 
          
            
@@ -74,7 +79,7 @@ namespace StocksAppConfigAssignment.Controllers
         public async Task<IActionResult> SellOrder(SellOrderRequest orderRequest)
         {
            
-            SellOrderResponse sellOrderResponse =await _stocksService.CreateSellOrder(orderRequest);
+            SellOrderResponse sellOrderResponse =await _stockServiceCreateOrder.CreateSellOrder(orderRequest);
             
 
             return RedirectToAction(nameof(Orders));
@@ -87,8 +92,8 @@ namespace StocksAppConfigAssignment.Controllers
             ViewBag.currentUrl = HttpContext.Request.Path;
             ViewBag.ActionName = ControllerContext.ActionDescriptor.ActionName;
 
-            List<BuyOrderResponse> buyOrdersResponse = await _stocksService.GetBuyOrders();
-            List<SellOrderResponse> sellOrdersResponse = await _stocksService.GetSellOrders();
+            List<BuyOrderResponse> buyOrdersResponse = await _stockServiceGetters.GetBuyOrders();
+            List<SellOrderResponse> sellOrdersResponse = await _stockServiceGetters.GetSellOrders();
 
             Orders orders = new Orders()
             {
@@ -105,8 +110,8 @@ namespace StocksAppConfigAssignment.Controllers
         public async Task<IActionResult> OrdersToPDF()
         {
             List<IOrderResponse> orders = new List<IOrderResponse>();
-            orders.AddRange(await _stocksService.GetBuyOrders());
-            orders.AddRange(await _stocksService.GetSellOrders());
+            orders.AddRange(await _stockServiceGetters.GetBuyOrders());
+            orders.AddRange(await _stockServiceGetters.GetSellOrders());
 
             orders = orders.OrderByDescending(o => o.DateAndTimeOfOrder).ToList();
 
