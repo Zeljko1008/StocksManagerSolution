@@ -1,0 +1,26 @@
+[
+  {
+    "SellOrderID": "83cb4c97-0164-4c1e-ae6a-5f1e8cc4b2e3",
+    "StockSymbol": "INFO",
+    "StockName": "IHS Markit Ltd.",
+    "DateAndTimeOfOrder": "2010-01-05T14:22:00",
+    "Quantity": 40,
+    "Price": 876.3
+  },
+  {
+    "SellOrderID": "de60476c-e07e-42b9-8f0f-3170d3053fab",
+    "StockSymbol": "GLOG^A",
+    "StockName": "GasLog LP.",
+    "DateAndTimeOfOrder": "2010-01-05T14:22:00",
+    "Quantity": 30,
+    "Price": 563.32
+  },
+  {
+    "SellOrderID": "24196885-fdf1-40b9-9f42-fcaf5b56c9b7",
+    "StockSymbol": "CDL",
+    "StockName": "VictoryShares US Large Cap High Div Volatility Wtd ETF",
+    "DateAndTimeOfOrder": "2010-01-05T14:22:00",
+    "Quantity": 309,
+    "Price": 91.61
+  }
+]

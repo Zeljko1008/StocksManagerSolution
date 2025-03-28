@@ -1,0 +1,51 @@
+﻿@model StocksAppConfigAssignment.Models.StockTrade
+@{
+    ViewBag.Title = "Trading";
+}
+
+<div class="text-grey mb">Stocks<i class="fa-solid fa-caret-right"></i> @Model.StockName</div>
+<form asp-controller="Trade" method="post">
+<div class="flex trade-content w-100">
+    <div class="flex-2 trade-stock">
+        <div id="">
+            <div class="stock">
+                <h1 class="stock-title">@Model.StockName<span> </span>(@Model.StockSymbol)</h1>
+                <h1 class="stock-price"><span class="currency">$</span> @Model.Price.ToString("F2")</h1>
+            </div>
+            
+        </div>
+    </div>
+    <div class="flex-1 order-stock">
+        <div>
+            <div class="form-field">
+                <h4 class="text-grey">New Order</h4>
+                <label class="form-label mt">Quantity:</label>
+                    <input type="number" asp-for="Quantity" value="@Model.Quantity" min="1" max="100000"  required="required" class="form-input mb" autofocus="autofocus" />
+            </div>
+            <div>
+                <button asp-controller="Trade" asp-action="SellOrder" class="button button-red-back"><i class="fa-solid fa-arrow-down" style="color: #F8F5E9;"></i> Sell</button>
+                    <button asp-controller="Trade" asp-action="BuyOrder" class="button button-green-back"><i class="fa-solid fa-arrow-up" style="color: #F8F5E9;"></i> Buy</button>
+                    <div asp-validation-summary="All" class="text-red"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <input type="hidden" asp-for="StockSymbol" value="@Model.StockSymbol" />
+    <input type="hidden" asp-for="StockName" value="@Model.StockName" />
+    <input type="hidden" asp-for="Price" value="@Model.Price" />
+    <input type="hidden" id="FinnhubToken" value="@ViewBag.FinnhubToken" />
+</form>
+
+@section Scripts {
+    @* import the FinnhubScript.js file to update the price *@
+    <script src="~/FinnhubScript.js">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" asp-fallback-test="window.jQuery" asp-fallback-src="~/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" asp-fallback-test="window.jQuery.validator" asp-fallback-src="~/jquery.validate.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" asp-fallback-test="window.jQuery.validator.unobstrusive" asp-fallback-src="~/jquery.validate.unobtrusive.min.js"></script>
+}
+
