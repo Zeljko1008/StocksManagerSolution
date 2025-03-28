@@ -51,4 +51,5 @@ appsettings.Development.json
 # Ignore build and temp files
 bin/
 obj/
+StocksManager.UI/Logs/
 
